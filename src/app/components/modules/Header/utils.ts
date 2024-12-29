@@ -11,7 +11,7 @@ export const routes = [
   },
   {
     id: 3,
-    path: '/projects',
+    path: '/pages/projects',
     label: 'Projects',
   }
 ]
