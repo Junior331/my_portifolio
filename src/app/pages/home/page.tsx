@@ -1,7 +1,7 @@
 import { Title } from "@/app/components/elements";
 import { Layout } from "@/app/components/organism";
 
-export const Home = () => {
+export default function Home() {
   return (
     <Layout>
       <div className="w-screen h-auto flex-1 flex flex-col justify-between items-center pb-6">
