@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./styles/globals.css";
-import { roboto } from "./assets/fonts";
+import { poppins, roboto } from "./assets/fonts";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -17,7 +17,7 @@ export default function RootLayout({
       {/* <head>
         <link rel="icon" href="/logo.svg" sizes="any" />
       </head> */}
-      <body className={`${roboto.className} antialiased`}>
+      <body className={`${roboto.className} ${poppins.className} antialiased`}>
         {children}
       </body>
     </html>

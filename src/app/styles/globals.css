@@ -121,3 +121,10 @@
     -webkit-box-orient: vertical;
   }
 }
+
+@layer utilities {
+  /* Estilos personalizados se necessários */
+  .text-style {
+    letter-spacing: -0.02em;
+  }
+}

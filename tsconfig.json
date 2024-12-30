@@ -26,6 +26,7 @@
       "pages/*": ["pages/*"],
       "hooks/*": ["hooks/*"],
       "styles/*": ["styles/*"],
+      "services/*": ["services/*"],
 
       "contexts/*": ["contexts/*"],
       "components/*": ["components/*"]

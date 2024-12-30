@@ -1,0 +1,1 @@
+export { PortfolioText } from "./PortfolioText";

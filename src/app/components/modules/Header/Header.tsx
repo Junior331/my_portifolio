@@ -9,7 +9,7 @@ export const Header = () => {
   const pathname = usePathname();
 
   return (
-    <div className="w-full flex gap-2 justify-between items-center p-7 px-8">
+    <div className="w-full flex gap-2 justify-between items-center">
       <p className="text-[1.7rem] jetbrains-mono">
         <span className="khula-extrabold text-[#00FF99]">{`{`} </span>
         Jaja
