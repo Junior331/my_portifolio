@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios, { AxiosError, AxiosResponse } from "axios";
-import { httpClientResponse } from "../types";
+import { httpClientResponse, httpRequest } from "../types";
 
 export function useAxiosRequest<RequestResponse>() {
   const [response, setResponse] = useState<httpClientResponse<RequestResponse> | null>(null);
