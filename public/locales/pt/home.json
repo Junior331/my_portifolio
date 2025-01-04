@@ -1,0 +1,13 @@
+{"greeting":"Jaja.",
+
+"summary_text_home_02":"Atualmente trabalho como desenvolvedor front-end, contribuindo para a experiência digital de milhares de novos usuários em uma plataforma Web3. Sou especialista em criar componentes reutilizáveis integrados com Styled Components, aplicando minhas habilidades em React, TypeScript e outras tecnologias para oferecer soluções eficientes e de alta qualidade.",
+
+"summary_text_home_03":"Ficarei feliz em responder a quaisquer perguntas que você possa ter e fornecer soluções para seus problemas.",
+
+"text_project_commits":"Compromissos do Projeto",
+
+"text_technologies_mastered":"Tecnologias dominadas\n",
+
+"text_years_experience":"Anos de experiência",
+
+"title_home":"Olá, eu sou {{ userName }}"}

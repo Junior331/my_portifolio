@@ -45,7 +45,7 @@ export const NumberTicker = ({
     <>
       <span
         className={cn(
-          "inline-block text-[3rem] tabular-nums text-title tracking-wider max-[465px]:text-[2.19rem]",
+          "inline-block text-[3.5rem] tabular-nums text-title tracking-wider max-[465px]:text-[2.19rem]",
           className
         )}
         ref={ref}

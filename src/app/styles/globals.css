@@ -9,6 +9,7 @@
     --text: 225, 11%, 85%;
     --title: 220, 7%, 83%;
     --border: 240 5.9% 90%;
+    --border-card: 0 0% 77%;
     --label: 253, 13%, 40%;
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
@@ -42,6 +43,7 @@
     --text: 251, 7%, 45%;
     --title: 253, 13%, 40%;
     --border: 240 3.7% 15.9%;
+    --border-card: 0 0% 100%;
     --foreground: 0 0% 98%;
 
     --card: 240 10% 3.9%;
@@ -76,37 +78,24 @@
     @apply border-border font-sans;
   }
   body {
+    overflow: hidden auto;
     @apply bg-background text-foreground;
-    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   body > * &::-webkit-scrollbar {
     width: 5px;
   }
+
   body > * &::-webkit-scrollbar-track {
     border-radius: 10px;
     background: transparent;
   }
   body > * &::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: #c4c4c4;
+    background: #1c2628;
   }
 
-  input:-webkit-autofill {
-    transition: background-color 5000s ease-in-out 0s;
-  }
-
-  /* Tema claro */
-  body input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
-    -webkit-text-fill-color: #a6adbb;
-  }
-
-  /* Tema escuro */
-  .dark input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px #283046 inset;
-    -webkit-text-fill-color: #a6adbb;
-  }
   .custom-rounded {
     border-start-start-radius: inherit !important;
     border-start-end-radius: inherit !important;
@@ -119,6 +108,140 @@
     -webkit-line-clamp: 3;
     overflow: hidden;
     -webkit-box-orient: vertical;
+  }
+
+  .background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../app/assets/images/stacks_bg.svg");
+  }
+
+  .padding-button div div {
+    padding: 10px;
+  }
+
+  .jetbrains-mono {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  .khula-extrabold {
+    font-family: "Khula", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  .inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .title-default {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.25px;
+  }
+
+  .text-default {
+    flex-shrink: 0;
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: var(--text);
+    line-height: normal;
+    letter-spacing: 0.25px;
+  }
+
+  .swap img {
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .portfolio_text_custom {
+    top: 65px;
+    right: 30px;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    flex-direction: column;
+    transform: rotateZ(90deg);
+  }
+
+  .button_menu {
+    left: 85%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: hsl(var(--background));
+  }
+
+  .button_menu path {
+    fill: hsl(var(--background));
+    color: hsl(var(--background));
+    background-color: hsl(var(--background));
+  }
+
+  .rotate_z {
+    transform: rotateZ(90deg);
+  }
+
+  .menu {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    padding-top: 100px;
+    flex-direction: column;
+    will-change: transform;
+    flex-wrap: nowrap !important;
+    transform: translateX(-100%);
+    background: hsl(var(--foreground));
+  }
+  .menu svg {
+    fill: hsl(var(--background)) !important;
+  }
+
+  ul {
+    gap: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 90px 0 20px 10px;
+  }
+
+  li {
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+    font-size: 48px;
+    font-weight: bold;
+    color: hsl(var(--background));
+    transform-origin: -20px 50%;
+    will-change: transform, opacity, filter;
+  }
+
+  ul,
+  li {
+    margin: 0;
+    list-style: none;
   }
 }
 

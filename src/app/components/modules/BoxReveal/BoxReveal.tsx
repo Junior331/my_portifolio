@@ -7,9 +7,9 @@ import { Props } from "./@types";
 
 export const BoxReveal = ({
   children,
-  width = "fit-content",
   boxColor,
   duration,
+  width = "fit-content",
 }: Props) => {
   const mainControls = useAnimation();
   const slideControls = useAnimation();

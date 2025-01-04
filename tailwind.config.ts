@@ -27,10 +27,11 @@ export default {
     },
     extend: {
       colors: {
-        span: "var(--span)",
-        text: "var(--text)",
+        span: "hsl(var(--span))",
+        text: "hsl(var(--text))",
         title: "var(--title)",
         border: "hsl(var(--border))",
+        border_card: "hsl(var(--border-card))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         accent: {
@@ -83,6 +84,8 @@ export default {
       animation: {
         move: "move 5s linear infinite",
         pulse: "pulse var(--duration) ease-out infinite",
+        orbit: "orbit calc(var(--duration)*1s) linear infinite",
+        ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
       },
       keyframes: {
         pulse: {
@@ -96,6 +99,24 @@ export default {
         move: {
           "0%": { transform: "translateX(-200px)" },
           "100%": { transform: "translateX(200px)" },
+        },
+        ripple: {
+          "0%, 100%": {
+            transform: "translate(-50%, -50%) scale(1)",
+          },
+          "50%": {
+            transform: "translate(-50%, -50%) scale(0.9)",
+          },
+        },
+        orbit: {
+          "0%": {
+            transform:
+              "rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg))",
+          },
+          "100%": {
+            transform:
+              "rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg))",
+          },
         },
       },
     },

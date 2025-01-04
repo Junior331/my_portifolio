@@ -73,10 +73,10 @@ export type stack = {
 
 export type project = {
   id: number;
+  image: any;
   text: string;
   date: string;
   title: string;
-  image: string;
   stacks: stack[];
   description: string;
 };

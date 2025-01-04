@@ -1,5 +1,6 @@
 import { twMerge } from "tailwind-merge";
 import { clsx, type ClassValue } from "clsx";
+import { fetchSimpleIcons } from "react-icon-cloud";
 
 import { stack } from "@/app/types";
 
@@ -29,4 +30,8 @@ export const generateRandomStacks = (stacks: stack[]) => {
 
 export const cn = (...inputs: ClassValue[]) => {
   return twMerge(clsx(inputs));
+};
+
+export const fetchIcons = (iconSlugs: string[]) => {
+  return fetchSimpleIcons({ slugs: iconSlugs });
 };

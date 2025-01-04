@@ -26,12 +26,13 @@
       "pages/*": ["pages/*"],
       "hooks/*": ["hooks/*"],
       "styles/*": ["styles/*"],
+      "config/*": ["config/*"],
       "services/*": ["services/*"],
-
       "contexts/*": ["contexts/*"],
-      "components/*": ["components/*"]
+      "components/*": ["components/*"],
+      "middlewares/*": ["middlewares/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/Providers/TranslationsProvider.js"],
   "exclude": ["node_modules"]
 }

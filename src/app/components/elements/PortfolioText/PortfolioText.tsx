@@ -2,11 +2,20 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+
+import { Props } from "./@types";
+import { cn } from "@/app/utils/utils";
 import { containerVariants, pathVariants } from "./utils";
 
-export const PortfolioText = () => {
+export const PortfolioText = ({ isOpen }: Props) => {
   return (
-    <div className="w-screen flex justify-center items-center min-h-screen fixed ">
+    <div
+      className={cn(
+        "w-screen flex justify-center items-center min-h-screen max-[1000px]:portfolio_text_custom z-0",
+        isOpen ? "hidden" : ""
+        // isOpen ? "!fixed !right-[21px]" : ""
+      )}
+    >
       <motion.svg
         fill="none"
         width="856"
@@ -67,14 +76,14 @@ export const PortfolioText = () => {
           d="M645.316 63.9581V231.4H698.898V216.665H661.391V63.9581H645.316Z"
         />
         <motion.path
-          stroke-width="7"
+          strokeWidth="7"
           variants={pathVariants}
           transition={{ duration: 1 }}
           className="stroke-[#3e4a69]/[0.2]"
           d="M96 118.25V116.75C96 91.2068 116.707 70.5 142.25 70.5C167.793 70.5 188.5 91.2068 188.5 116.75V118.25C188.5 143.793 167.793 164.5 142.25 164.5C116.707 164.5 96 143.793 96 118.25Z"
         />
         <motion.path
-          stroke-width="7"
+          strokeWidth="7"
           variants={pathVariants}
           transition={{ duration: 1 }}
           className="stroke-[#3e4a69]/[0.2]"
@@ -87,7 +96,7 @@ export const PortfolioText = () => {
           d="M777.93 129.595C777.93 136.993 783.928 142.991 791.326 142.991V142.991V142.991C798.724 142.991 804.721 136.993 804.721 129.595V128.256C804.721 120.858 798.724 114.86 791.326 114.86V114.86V114.86C783.928 114.86 777.93 120.858 777.93 128.256V129.595Z"
         />
         <motion.path
-          stroke-width="7"
+          strokeWidth="7"
           variants={pathVariants}
           transition={{ duration: 1 }}
           className="stroke-[#3e4a69]/[0.2]"

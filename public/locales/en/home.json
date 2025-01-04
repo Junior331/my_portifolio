@@ -1,0 +1,15 @@
+{
+    "greeting":"Jaja.",
+
+    "summary_text_home_02":"I currently work as a front-end developer, contributing to the digital experience of thousands of new users on a Web3 platform. I specialize in creating reusable components integrated with Styled Components, applying my skills in React, TypeScript and other technologies to offer efficient, high-quality solutions.",
+    
+    "summary_text_home_03":"I'm happy to answer any questions you may have and provide solutions to your problems.",
+
+    "text_project_commits":"Project Commits",
+
+    "text_technologies_mastered":"Technologies mastered\n",
+
+    "text_years_experience":"Years of experience",
+
+    "title_home":"Hi, I’m {{ userName }}"
+}

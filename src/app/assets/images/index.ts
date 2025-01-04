@@ -1,6 +1,7 @@
 import devs from "./devs.svg";
 import proz from "./proz.svg";
 import visna from "./visna.svg";
+import avatar from "./avatar.jpg";
 import stacksBg from "./stacks_bg.svg";
 import matchBet from "./match_bet.jpg";
 import fallback from "./placeholder.svg";
@@ -17,6 +18,7 @@ export const images = {
   devs,
   proz,
   visna,
+  avatar,
   matchBet,
   fallback,
   stacksBg,
