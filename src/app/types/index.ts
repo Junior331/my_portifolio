@@ -1,19 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export interface Snackbar {
-  isOpen: boolean;
-  message: string;
-  vertical: "top" | "bottom";
-  horizontal: "left" | "center" | "right";
-  severity: "success" | "info" | "warning" | "error";
-}
-
-export interface SnackbarContextType {
-  snackbar: Snackbar;
-  closeSnackbar: () => void;
-  resetSnackbar: () => void;
-  setSnackbar: (snackbarData: Snackbar) => void;
-}
-
 export type httpRequest = {
   body: any;
   url: string;
@@ -29,6 +14,7 @@ export type httpClientResponse<T = any> = {
   body: T;
   statusCode: number;
 };
+
 export type gitHubUserResponse = {
   id: number;
   url: string;
