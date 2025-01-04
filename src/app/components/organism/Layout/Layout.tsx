@@ -3,12 +3,12 @@
 import { LayoutProps } from "./@types";
 import { Header, Menu } from "@/app/components/modules";
 import { PortfolioText } from "@/app/components/elements";
-import { BackgroundBeamsWithCollision } from "@/app/components/organism";
+// import { BackgroundBeamsWithCollision } from "@/app/components/organism";
 import { ShootingStars } from "./shooting-stars";
 import { StarsBackground } from "./stars-background";
 
-import { DotPattern } from "./DotPattern";
-import { cn } from "@/app/utils/utils";
+// import { DotPattern } from "./DotPattern";
+// import { cn } from "@/app/utils/utils";
 import { Ripple } from "./Ripple";
 import { useState } from "react";
 
