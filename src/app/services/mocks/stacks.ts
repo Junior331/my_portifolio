@@ -24,7 +24,7 @@ export const stacks: stack[] = [
   },
   {
     id: 5,
-    name: "aws",
-    url: getIcons('aws'),
+    name: "amazonaws",
+    url: getIcons('amazonaws'),
   },
 ];

@@ -12,7 +12,7 @@ export function RenderIcon({
   const fallbackHex = theme === "dark" ? "#6e6e73" : "#ffffff";
   const minContrastRatio = theme === "dark" ? 2 : 1.2;
 
-  return renderSimpleIcon({
+  const renderedIcon = renderSimpleIcon({
     icon,
     bgHex,
     fallbackHex,
@@ -25,4 +25,8 @@ export function RenderIcon({
       onClick: (e: any) => e.preventDefault(),
     },
   });
+
+  return (
+    <div className="relative flex flex-col items-center">{renderedIcon}</div>
+  );
 }

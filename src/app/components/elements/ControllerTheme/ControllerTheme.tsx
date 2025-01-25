@@ -1,9 +1,14 @@
+"use client";
+
+import { useTheme } from "next-themes";
+
 import { Props } from "./@types";
 
 export const ControllerTheme = ({ className, disabled = false }: Props) => {
-  const toggleDark = () => {
-    const el = document.documentElement;
-    el.classList.toggle("dark");
+  const { theme, setTheme } = useTheme();
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   return (
@@ -16,7 +21,7 @@ export const ControllerTheme = ({ className, disabled = false }: Props) => {
         type="checkbox"
         value="synthwave"
         id="theme-checkbox"
-        onClick={toggleDark}
+        onClick={toggleTheme}
         disabled={disabled}
         data-testid="theme-checkbox"
         className="theme-controller"

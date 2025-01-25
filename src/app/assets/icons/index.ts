@@ -1,8 +1,10 @@
 import cup from "./cup.svg";
-import aws from "./aws.svg";
 import game from "./game.svg";
 import figma from "./figma.svg";
+import azure from "./azure.png";
 import react from "./react.svg";
+import vscode from "./vscode.png";
+import amazonaws from "./aws.svg";
 import coffee from "./coffee.svg";
 import devices from "./devices.svg";
 import metamask from "./metamask.svg";
@@ -15,17 +17,19 @@ import circleSmallAvatar from "./circle_small_avatar.svg";
 
 
 export const icons = {
-  aws,
   cup,
   game,
   react,
   figma,
+  azure,
   coffee,
+  vscode,
   devices,
   fallback,
   metamask,
   musicPlay,
   medalStar,
+  amazonaws,
   typescript,
   circleLargeAvatar,
   circleSmallAvatar,

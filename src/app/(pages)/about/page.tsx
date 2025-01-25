@@ -3,16 +3,19 @@
 import Image from "next/image";
 import { CSSProperties } from "react";
 import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
 
-import { data } from "./utils";
 import { cn } from "@/app/utils/utils";
-import { icons } from "@/app/assets/icons";
 import { images } from "@/app/assets/images";
 import { mocks } from "@/app/services/mocks";
+import { data as dataTimeLine } from "./utils";
 import { Text, Title } from "@/app/components/elements";
 import { Layout, Timeline } from "@/app/components/organism";
+import { SlugIcon } from "@/app/components/elements/SlugIcon";
 
 export default function About() {
+  const { theme } = useTheme();
+
   return (
     <Layout>
       <div className="w-full h-auto flex-1 flex flex-col justify-between items-center pb-6">
@@ -81,44 +84,60 @@ export default function About() {
               `mx-auto my-0 max-h-[23rem] max-w-[23rem] order-1 w-screen h-screen relative rounded-full flex items-center justify-center lg:max-h-[34rem] lg:max-w-[34rem] lg:order-2 lg:mr-0`
             )}
           >
-            <Image src={icons.circleLargeAvatar} alt={`Icon circle`} />
+            <svg
+              width="556"
+              height="556"
+              viewBox="0 0 556 556"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M555.375 277.938C555.375 431.168 432.591 555.375 281.14 555.375C129.69 555.375 6.90509 431.168 6.90509 277.938C6.90509 124.708 129.69 0.5 281.14 0.5C432.591 0.5 555.375 124.708 555.375 277.938Z"
+                stroke={theme === "dark" ? "#fff" : "black"}
+              />
+              <ellipse
+                cx="24.1841"
+                cy="180.074"
+                rx="24.1841"
+                ry="24.466"
+                fill={theme === "dark" ? "#fff" : "black"}
+              />
+            </svg>
+
             <Image
               src={images.avatar}
               className="absolute max-w-[90%] lg:max-w-[470px] rounded-[400px] opacity-[0.6]"
               alt={`Image avatar`}
             />
 
-            <Image
-              alt={`Icon circle`}
-              src={icons.circleSmallAvatar}
+            <svg
+              width="106"
+              fill="none"
+              height="105"
               className="absolute right-[-55px] bottom-[-20px] z-[2] max-[420px]:hidden"
-            />
+              viewBox="0 0 106 105"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M105.5 52.2618C105.5 80.8254 82.613 103.971 54.3926 103.971C26.1721 103.971 3.2851 80.8254 3.2851 52.2618C3.2851 23.6982 26.1721 0.552734 54.3926 0.552734C82.613 0.552734 105.5 23.6982 105.5 52.2618Z"
+                stroke={theme === "dark" ? "#fff" : "black"}
+              />
+              <ellipse
+                cx="6.74536"
+                cy="36.1726"
+                rx="6.39874"
+                ry="6.47333"
+                fill={theme === "dark" ? "#fff" : "black"}
+              />
+            </svg>
           </div>
         </div>
-        <div className="flex flex-col w-full h-auto lg:px-9 gap-10 mb-10">
+        <div className="flex flex-col w-full h-auto lg:px-9 gap-10 my-10">
           <Title className="text-4xl">Skills & Expertise</Title>
 
           <div className="flex w-full h-auto">
             <div className="flex flex-wrap items-center w-screen gap-3 justify-start">
-              {[
-                ...mocks.projects[0].stacks,
-                ...mocks.projects[0].stacks,
-                ...mocks.projects[0].stacks,
-                ...mocks.projects[0].stacks,
-              ].map((item, index) => (
-                <div
-                  key={`${item.id}-${index}`}
-                  className={cn(
-                    `h-12 w-12 rounded-full flex items-center justify-center bg-[rgba(248,248,248,0.01)] shadow-[0px_0px_8px_0px_rgba(248,248,248,0.25)_inset,0px_32px_24px_-16px_rgba(0,0,0,0.40)]`
-                  )}
-                >
-                  <Image
-                    src={item.url}
-                    className="h-6 w-6"
-                    alt={`Icons ${item.name}`}
-                  />
-                </div>
-              ))}
+              <SlugIcon slugs={mocks.slugs} />
             </div>
           </div>
         </div>
@@ -131,7 +150,7 @@ export default function About() {
           </Text>
 
           <div className="flex justify-start items-start w-full h-auto">
-            <Timeline data={data} />
+            <Timeline data={dataTimeLine} />
           </div>
         </div>
       </div>

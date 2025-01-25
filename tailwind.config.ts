@@ -27,10 +27,11 @@ export default {
     },
     extend: {
       colors: {
+        title: "var(--title)",
         span: "hsl(var(--span))",
         text: "hsl(var(--text))",
-        title: "var(--title)",
         border: "hsl(var(--border))",
+        dot_fill: "var(--dot-fill)",
         border_card: "hsl(var(--border-card))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

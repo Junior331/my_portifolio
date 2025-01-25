@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./styles/globals.css";
 import { poppins, roboto } from "./assets/fonts";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -18,7 +19,7 @@ export default function RootLayout({
         <link rel="icon" href="/logo.svg" sizes="any" />
       </head> */}
       <body className={`${roboto.className} ${poppins.className} antialiased`}>
-        {children}
+        <ThemeProvider attribute="class">{children}</ThemeProvider>
       </body>
     </html>
   );

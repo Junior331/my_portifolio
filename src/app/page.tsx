@@ -1,9 +1,21 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 import { mocks } from "@/app/services/mocks";
 import { Button, Title } from "@/app/components/elements";
 import { CloudStack, Layout } from "@/app/components/organism";
 import { BlurIn, BoxReveal, NumberTicker } from "@/app/components/modules";
 
 export default function Home() {
+  const [listSlugs, setListSlugs] = useState(mocks.slugs);
+
+  useEffect(() => {
+    console.log("mocks.slugs ::", mocks.slugs);
+    setListSlugs(mocks.slugs);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mocks.slugs]);
+
   return (
     <Layout>
       <div className="w-full h-auto flex-1 flex flex-col justify-between items-center pb-6">
@@ -71,7 +83,7 @@ export default function Home() {
           </div>
 
           <div className="m-auto relative flex h-auto max-w-[530px] w-full flex-col items-center justify-center overflow-hidden background">
-            <CloudStack iconSlugs={mocks.slugs} />
+            <CloudStack iconSlugs={listSlugs} />
           </div>
         </div>
         <div className="flex max-[465px]:flex-col-reverse max-[1000px]:flex-wrap-reverse max-[608px]:gap-16 max-[608px]:mt-14 gap-8 place-items-end justify-between bottom-8 w-screen px-8">
