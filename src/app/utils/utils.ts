@@ -14,6 +14,7 @@ export const getCurrentDate = (): string => {
 
 export const generateRandomNumber = (untilNumbers: number) =>
   Math.floor(Math.random() * untilNumbers);
+
 export const getRandomInt = (min: number, max: number) =>
   Math.floor(Math.random() * (max - min)) + min;
 
@@ -35,3 +36,8 @@ export const cn = (...inputs: ClassValue[]) => {
 export const fetchIcons = (iconSlugs: string[]) => {
   return fetchSimpleIcons({ slugs: iconSlugs });
 };
+
+export const handleRedirect = (router: string) => {
+  window.open(router, "_blank");
+};
+

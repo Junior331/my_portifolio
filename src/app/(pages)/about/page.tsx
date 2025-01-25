@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { CSSProperties } from "react";
+import { CSSProperties, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 
-import { cn } from "@/app/utils/utils";
+import { cn, handleRedirect } from "@/app/utils/utils";
 import { images } from "@/app/assets/images";
 import { mocks } from "@/app/services/mocks";
 import { data as dataTimeLine } from "./utils";
@@ -15,6 +15,12 @@ import { SlugIcon } from "@/app/components/elements/SlugIcon";
 
 export default function About() {
   const { theme } = useTheme();
+
+  useEffect(() => {
+    console.log("theme ::", theme);
+  }, [theme]);
+
+  if (!theme) return null;
 
   return (
     <Layout>
@@ -51,9 +57,13 @@ export default function About() {
               Fico à disposição para dúvidas e poder contribuir com soluções aos
               seus problemas.
             </Text>
-
             <div className="w-auto h-auto mt-10">
               <motion.button
+                onClick={() =>
+                  handleRedirect(
+                    "https://calendly.com/jarilson-rk/30min?back=1"
+                  )
+                }
                 className="relative flex w-80 h-14 cursor-pointer items-center justify-center rounded-md border-none p-2 animate-pulse"
                 style={
                   {
@@ -73,7 +83,7 @@ export default function About() {
                   className="relative block font-semibold"
                   exit={{ x: 50, transition: { duration: 0.1 } }}
                 >
-                  Iniciar Conversa no WhatsApp
+                  Agendar um bate-papo
                 </motion.span>
               </motion.button>
             </div>
