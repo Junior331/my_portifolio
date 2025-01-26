@@ -38,6 +38,7 @@ export const fetchIcons = (iconSlugs: string[]) => {
 };
 
 export const handleRedirect = (router: string) => {
-  window.open(router, "_blank");
+  if (router) {
+    window.open(router, "_blank");
+  }
 };
-

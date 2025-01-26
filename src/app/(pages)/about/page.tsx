@@ -1,17 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import { CSSProperties, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import { CSSProperties, useEffect } from "react";
 
-import { cn, handleRedirect } from "@/app/utils/utils";
 import { images } from "@/app/assets/images";
 import { mocks } from "@/app/services/mocks";
-import { data as dataTimeLine } from "./utils";
+import { cn, handleRedirect } from "@/app/utils/utils";
 import { Text, Title } from "@/app/components/elements";
 import { Layout, Timeline } from "@/app/components/organism";
 import { SlugIcon } from "@/app/components/elements/SlugIcon";
+import { dataFreelance, dataHackathons, data as dataTimeLine } from "./utils";
+import { icons } from "@/app/assets/icons";
 
 export default function About() {
   const { theme } = useTheme();
@@ -24,8 +25,8 @@ export default function About() {
 
   return (
     <Layout>
-      <div className="w-full h-auto flex-1 flex flex-col justify-between items-center pb-6">
-        <div className="w-full h-full gap-5 grid grid-cols-1 lg:grid-cols-2 pb-5 place-items-end lg:pr-20 ">
+      <div className="w-full h-auto flex-1 flex flex-col justify-between items-center pb-6 gap-10">
+        <div className="w-full h-full gap-5 grid grid-cols-1 lg:grid-cols-2 pb-5 place-items-start lg:pr-20 ">
           <div className="flex flex-col w-full h-full lg:px-9 gap-4 lg:order-1 order-2">
             <Title className="text-5xl mb-5 mt-10">Top ? Vamos lá =)</Title>
             <Text className="text-lg max-w-4xl">
@@ -91,7 +92,7 @@ export default function About() {
 
           <div
             className={cn(
-              `mx-auto my-0 max-h-[23rem] max-w-[23rem] order-1 w-screen h-screen relative rounded-full flex items-center justify-center lg:max-h-[34rem] lg:max-w-[34rem] lg:order-2 lg:mr-0`
+              `mx-auto mt-16 max-h-[23rem] max-w-[23rem] order-1 w-screen h-screen relative rounded-full flex items-center justify-center lg:max-h-[34rem] lg:max-w-[34rem] lg:order-2 lg:mr-0`
             )}
           >
             <svg
@@ -142,7 +143,8 @@ export default function About() {
             </svg>
           </div>
         </div>
-        <div className="flex flex-col w-full h-auto lg:px-9 gap-10 my-10">
+
+        <div className="flex flex-col w-full h-auto lg:px-9 gap-10 ">
           <Title className="text-4xl">Skills & Expertise</Title>
 
           <div className="flex w-full h-auto">
@@ -151,16 +153,154 @@ export default function About() {
             </div>
           </div>
         </div>
+
+        <div className="flex flex-col max-w-[100dvw] w-full h-auto lg:px-9 gap-4">
+          <Title className="text-4xl">Education</Title>
+
+          <div className="flex justify-start items-start w-full h-auto">
+            <div className="grid grid-cols-3 gap-3">
+              {mocks.education.education.map((item) => (
+                <figure
+                  key={item.id}
+                  className={cn(
+                    "relative min-h-fit w-full min-w-[400px] cursor-default overflow-hidden rounded-2xl p-4",
+                    // animation styles
+                    "transition-all duration-200 ease-in-out hover:scale-[103%]",
+                    theme === "dark"
+                      ? "transform-gpu  dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
+                      : "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]"
+                  )}
+                >
+                  <div className="flex flex-row items-center gap-3">
+                    <div
+                      className="flex min-w-10 min-h-10 size-10 items-center justify-center rounded-2xl"
+                      style={{
+                        backgroundColor: item.color,
+                      }}
+                    >
+                      <span className="text-lg">
+                        <Image
+                          src={icons.mortarboardGif}
+                          className="max-w-[28px] invert mix-blend-color-dodge"
+                          alt={`Image mortarboard`}
+                        />
+                      </span>
+                    </div>
+                    <div className="flex flex-col overflow-hidden flex-1">
+                      <figcaption
+                        className={cn(
+                          "flex flex-row items-center whitespace-pre text-lg font-medium  ",
+                          theme === "dark" ? "dark:text-white" : "text-black/85"
+                        )}
+                      >
+                        <span className="text-sm sm:text-lg text-ellipsis overflow-hidden flex-1">
+                          {item.name}
+                        </span>
+                        <span className="mx-1">·</span>
+                        <span className="text-xs text-gray-500">
+                          {item.time}
+                        </span>
+                      </figcaption>
+                      <p
+                        className={cn(
+                          "text-sm font-normal",
+                          theme === "dark"
+                            ? "dark:text-white/60"
+                            : "text-black/60"
+                        )}
+                      >
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col max-w-[100dvw] w-full h-auto lg:px-9 gap-4">
+          <Title className="text-4xl">Licenses & certificates</Title>
+
+          <div className="grid grid-cols-3 gap-3">
+            {mocks.education.certificates.map((item) => (
+              <figure
+                key={item.id}
+                onClick={() => handleRedirect(item.link)}
+                className={cn(
+                  "relative min-h-fit w-full min-w-[400px] cursor-pointer overflow-hidden rounded-2xl p-4",
+                  item.link ? "cursor-pointer" : "cursor-default",
+                  // animation styles
+                  "transition-all duration-200 ease-in-out hover:scale-[103%]",
+                  theme === "dark"
+                    ? "transform-gpu  dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
+                    : "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]"
+                )}
+              >
+                <div className="flex flex-row items-center gap-3">
+                  <div
+                    className="flex min-w-10 min-h-10 size-10 items-center justify-center rounded-2xl"
+                    style={{
+                      backgroundColor: item.color,
+                    }}
+                  >
+                    <span className="text-lg">
+                      <Image
+                        src={icons.mortarboardGif}
+                        className="max-w-[28px] invert mix-blend-color-dodge"
+                        alt={`Image mortarboard`}
+                      />
+                    </span>
+                  </div>
+                  <div className="flex flex-col overflow-hidden flex-1">
+                    <figcaption
+                      className={cn(
+                        "flex flex-row items-center whitespace-pre text-lg font-medium  ",
+                        theme === "dark" ? "dark:text-white" : "text-black/85"
+                      )}
+                    >
+                      <span className="text-sm sm:text-lg text-ellipsis overflow-hidden flex-1">
+                        {item.name}
+                      </span>
+                      <span className="mx-1">·</span>
+                      <span className="text-xs text-gray-500">{item.time}</span>
+                    </figcaption>
+                    <p
+                      className={cn(
+                        "text-sm font-normal",
+                        theme === "dark"
+                          ? "dark:text-white/60"
+                          : "text-black/60"
+                      )}
+                    >
+                      {item.issuing_organization}
+                    </p>
+                  </div>
+                </div>
+              </figure>
+            ))}
+          </div>
+        </div>
+
         <div className="flex flex-col max-w-[100dvw] w-full h-auto lg:px-9 gap-4">
           <Title className="text-4xl">Professional Experience</Title>
-          <Text className="max-w-[550px] leading-6">
-            Tenho me dedicado ao desenvolvimento de soluções criativas e
-            impactantes ao longo dos últimos anos. Aqui está um resumo das
-            minhas experiências e aprendizados no setor.
-          </Text>
 
           <div className="flex justify-start items-start w-full h-auto">
             <Timeline data={dataTimeLine} />
+          </div>
+        </div>
+
+        <div className="flex flex-col max-w-[100dvw] w-full h-auto lg:px-9 gap-4">
+          <Title className="text-4xl">Freelance Experience</Title>
+          <div className="flex justify-start items-start w-full h-auto">
+            <Timeline data={dataFreelance} />
+          </div>
+        </div>
+
+        <div className="flex flex-col max-w-[100dvw] w-full h-auto lg:px-9 gap-4">
+          <Title className="text-4xl">Hackathons Experience</Title>
+          <div className="flex justify-start items-start w-full h-auto">
+            <Timeline data={dataHackathons} />
           </div>
         </div>
       </div>
