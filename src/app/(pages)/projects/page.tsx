@@ -11,8 +11,8 @@ export default function Projects() {
   const [listProjects, setListProjects] = useState<project[]>([emptyProject]);
 
   useEffect(() => {
-    fetchProjects().then((allProjects: project[]) => {
-      setListProjects(allProjects);
+    fetchProjects().then((allProjects) => {
+      setListProjects(allProjects as project[]);
     });
   }, []);
 
