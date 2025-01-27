@@ -14,10 +14,10 @@
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --dot-fill: rgb(163 163 163 / 0.6);
-    
+
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
-    
+
     --accent: 240 4.8% 95.9%;
     --accent-foreground: 240 5.9% 10%;
     --popover: 0 0% 100%;
@@ -38,7 +38,7 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
   }
-  
+
   .dark {
     --span: 0, 0%, 73%;
     --dot-fill: rgb(163 163 163 / 0.3);
@@ -204,6 +204,45 @@
 
   .rotate_z {
     transform: rotateZ(90deg);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark {
+    --span: 0, 0%, 73%;
+    --dot-fill: rgb(163 163 163 / 0.3);
+    --text: 251, 7%, 45%;
+    --title: 253, 13%, 40%;
+    --border: 240 3.7% 15.9%;
+    --border-card: 0 0% 100%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --link: 245, 82%, 67%;
+    --link-foreground: 245, 39%, 46%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --background: 240 10% 3.9%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }
 

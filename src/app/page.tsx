@@ -131,31 +131,3 @@ export default function Home() {
     </Layout>
   );
 }
-{
-  /* <div className="grid gap-12 max-w-[780px] auto-rows-auto md:grid-cols-[repeat(auto-fit,minmax(216px,1fr))]">
-<div className="w-auto flex items-center gap-3">
-  <p className="flex items-center text-3xl font-bold">
-    + <NumberTicker value={6} />
-  </p>
-  <p className="inter text-lg max-[465px]:text-base">
-    Years of <br /> experience
-  </p>
-</div>
-<div className="w-auto flex items-center gap-3">
-  <p className="flex items-center text-3xl font-bold">
-    + <NumberTicker value={14} />
-  </p>
-  <p className="inter text-lg max-[465px]:text-base">
-    Technologies <br /> Mastered
-  </p>
-</div>
-<div className="w-auto flex items-center gap-3">
-  <p className="flex items-center text-3xl font-bold">
-    + <NumberTicker value={2180} />
-  </p>
-  <p className="inter text-lg max-[465px]:text-base">
-    Commits in <br /> Projects
-  </p>
-</div>
-</div> */
-}
