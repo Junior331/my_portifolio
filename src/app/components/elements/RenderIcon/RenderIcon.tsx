@@ -17,7 +17,7 @@ export function RenderIcon({
     bgHex,
     fallbackHex,
     minContrastRatio,
-    size: 42,
+    size: 30,
     aProps: {
       rel: undefined,
       href: undefined,

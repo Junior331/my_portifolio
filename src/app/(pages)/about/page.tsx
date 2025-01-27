@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import Image from "next/image";
@@ -28,35 +29,33 @@ export default function About() {
       <div className="w-full h-auto flex-1 flex flex-col justify-between items-center pb-6 gap-10">
         <div className="w-full h-full gap-5 grid grid-cols-1 lg:grid-cols-2 pb-5 place-items-start lg:pr-20 ">
           <div className="flex flex-col w-full h-full lg:px-9 gap-4 lg:order-1 order-2">
-            <Title className="text-5xl mb-5 mt-10">Top ? Vamos lá =)</Title>
+            <Title className="text-5xl mb-5 mt-10">Who I Am</Title>
             <Text className="text-lg max-w-4xl">
-              Desenvolvedor Mobile e Web Com 6 anos de experiência na área de
-              Tecnologia da Informação e 5 anos de atuação no mercado com foco
-              em aplicações React, React Native e TypeScript. Procuro trabalhar
-              em projetos que melhorem a vida das pessoas por meio da
-              tecnologia. Não quero ser apenas um desenvolvedor de código, mas
-              entender a finalidade e o usuário alvo do produto em que vou
-              trabalhar.
+              Mobile and Web Developer with 6 years of experience in the
+              Information Technology field and 5 years in the market, focusing
+              on React, React Native, and TypeScript applications. I aim to work
+              on projects that improve people's lives through technology. I
+              don't just want to be a code developer but to understand the
+              purpose and target audience of the product I will be working on.
             </Text>
             <Text className="text-lg max-w-4xl">
-              Tenho experiência no desenvolvimento front-end com diversas
-              tecnologias. Isso me permitiu compreender conceitos fortes e
-              aplicá-los no aprendizado de novas tecnologias. Estou sempre
-              aberto a novos conhecimentos, analisar problemas e apresentar
-              soluções que vão além do básico.
+              I have experience in front-end development using various
+              technologies. This has allowed me to grasp solid concepts and
+              apply them when learning new technologies. I am always open to
+              gaining new knowledge, analyzing problems, and presenting
+              solutions that go beyond the basics.
             </Text>
             <Text className="text-lg max-w-4xl">
-              Além do trabalho, sou membro do projeto Estartando Devs desde
-              2019. Iniciei como aluno e, atualmente, atuo como mentor no
-              desenvolvimento front-end, orientando e capacitando novos
-              talentos. Este projeto é uma das minhas maiores fontes de orgulho,
-              pois tenho a oportunidade de impactar positivamente a vida de
-              outras pessoas e contribuir para o seu crescimento profissional,
-              mesmo que de forma simples.
+              Beyond work, I have been a member of the Estartando Devs project
+              since 2019. I started as a student and now serve as a mentor in
+              front-end development, guiding and empowering new talents. This
+              project is one of my greatest sources of pride, as it gives me the
+              opportunity to positively impact other people's lives and
+              contribute to their professional growth, even in a simple way.
             </Text>
             <Text className="text-lg max-w-4xl">
-              Fico à disposição para dúvidas e poder contribuir com soluções aos
-              seus problemas.
+              I am available to answer any questions and contribute solutions to
+              your challenges.
             </Text>
             <div className="w-auto h-auto mt-10">
               <motion.button
@@ -84,7 +83,7 @@ export default function About() {
                   className="relative block font-semibold"
                   exit={{ x: 50, transition: { duration: 0.1 } }}
                 >
-                  Agendar um bate-papo
+                  Schedule a meeting
                 </motion.span>
               </motion.button>
             </div>

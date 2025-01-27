@@ -24,6 +24,23 @@ import marketplaceProject from "./marketplace_project.png";
 import mainWebsiteLovemonster from "./main_website_lovemonster.png";
 import zombieCollectionLovemonster from "./zombie_collection_lovemonster.png";
 
+import projectShop from "./project_shop.png";
+import projectXgrow from "./project_xgrow.png";
+import project_snowdex from "./project_snowdex.png";
+import project_cupmind from "./project_cupmind.png";
+import projectLocalize from "./project_localize.png";
+import projectDogzverse from "./project_dogzverse.png";
+import project_dashboard from "./project_dashboard.png";
+import project_featoubeat from "./project_featoubeat.png";
+import project_marketplace from "./project_marketplace.png";
+import project_claim_token from "./project_claim_token.png";
+import projeto_camisa_cria from "./projeto_camisa_cria.png";
+import project_dashboard_nrg from "./project_dashboard_nrg.png";
+import project_challenge_next from "./project_challenge_next.png";
+import projectConvit3Digital from "./project_convit3_digital.png";
+import projectCheckoutCarbon from "./project_checkout_carbon.png";
+import project_dashboard_casino from "./project_dashboard_casino.png";
+import project_dashboard_lovestaking from "./project_dashboard_lovestaking.png";
 
 export const images = {
   devs,
@@ -43,14 +60,32 @@ export const images = {
   turtle04,
   conectEdu,
   logoImpar,
+  projectShop,
   logoSicredi,
   placeholder,
   loveMonster,
   logoInforce,
+  projectXgrow,
   logoPetrobras,
+  projectLocalize,
+  projectDogzverse,
   marketplaceProject,
+  projectConvit3Digital,
+  projectCheckoutCarbon,
   mainWebsiteLovemonster,
   zombieCollectionLovemonster,
+
+  project_snowdex,
+  project_cupmind,
+  project_dashboard,
+  project_featoubeat,
+  project_marketplace,
+  project_claim_token,
+  projeto_camisa_cria,
+  project_dashboard_nrg,
+  project_challenge_next,
+  project_dashboard_casino,
+  project_dashboard_lovestaking,
 };
 
 type IImage = keyof typeof images;

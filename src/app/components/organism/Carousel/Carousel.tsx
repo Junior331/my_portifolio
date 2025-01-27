@@ -72,7 +72,7 @@ export const Carousel = ({ projects }: Props) => {
               onClick={() => router.push(`/projects/${item.id}`)}
             >
               <Image
-                src={item.image}
+                src={item.banner}
                 alt={`Image project ${item.title}`}
                 className="object-cover w-full h-full brightness-[0.48]"
               />

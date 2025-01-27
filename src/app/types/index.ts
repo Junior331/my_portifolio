@@ -59,10 +59,12 @@ export type stack = {
 
 export type project = {
   id: number;
-  image: any;
+  images: any;
+  banner: any;
   text: string;
   date: string;
   title: string;
-  stacks: stack[];
+  slugs: string[];
   description: string;
+  slugs_primary: string[];
 };

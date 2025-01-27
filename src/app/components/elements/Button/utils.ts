@@ -5,11 +5,14 @@ export const handleDownload = ({
   downloadFileUrl,
   setIsDownload,
 }: handleDownloadProps) => {
-  const link = document.createElement("a");
+  if (!downloadFileUrl) return;
   const currentDate = getCurrentDate();
-  const fileName = `curriculo-pablo-moureira-${currentDate}.pdf`;
+
+  const link = document.createElement("a");
   link.href = downloadFileUrl;
-  link.download = fileName;
+  link.download = `curriculo-jarilson-reis-${currentDate}.pdf`; // Nome fixo para testes
+  document.body.appendChild(link); // Necessário para funcionar em alguns navegadores
   link.click();
+  document.body.removeChild(link); // Remover o link após o clique
   setIsDownload(true);
 };

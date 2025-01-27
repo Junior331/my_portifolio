@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export const data = [
   {
-    title: "2019 - Now",
+    title: "2018 - Now",
     content: (
       <div className="flex flex-col gap-8">
         <Title>Estartando Devs</Title>

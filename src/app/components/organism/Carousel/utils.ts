@@ -12,8 +12,8 @@ export const replicateProjects = ({
         return {
           ...project,
           id: newId,
-          stacks: project.stacks.map((stack, index) => ({
-            ...stack,
+          slugs: project.slugs.map((slug, index) => ({
+            ...slug,
             id: index + 1,
           })),
         };

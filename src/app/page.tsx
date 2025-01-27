@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import { mocks } from "@/app/services/mocks";
@@ -21,31 +22,31 @@ export default function Home() {
             <div className="flex flex-col gap-3 max-w-[760px] ">
               <BoxReveal boxColor={"#262626"} duration={0.5}>
                 <p className="inter capitalize text-lg font-extralight">
-                  Sou desenvolvedor Mobile e Web com 6 anos de experiência em
-                  Tecnologia da Informação e 5 anos de atuação no mercado, com
-                  foco em aplicações React, React Native e TypeScript. Procuro
-                  trabalhar em projetos que impactem positivamente a vida das
-                  pessoas por meio da tecnologia. Meu objetivo não é apenas
-                  desenvolver código, mas entender profundamente o propósito do
-                  produto e o público-alvo para agregar valor real ao projeto.
+                  I am a Mobile and Web Developer with 6 years of experience in
+                  Information Technology and 5 years in the market, focusing on
+                  React, React Native, and TypeScript applications. I strive to
+                  work on projects that positively impact people's lives through
+                  technology. My goal is not just to write code but to deeply
+                  understand the product's purpose and target audience to bring
+                  real value to the project.
                 </p>
               </BoxReveal>
 
               <BoxReveal boxColor={"#262626"} duration={0.5}>
                 <p className="inter capitalize text-lg font-extralight">
-                  Atualmente, atuo como desenvolvedor front-end, contribuindo
-                  para a experiência digital de milhares de novos usuários em
-                  uma plataforma Web3. Sou especialista em criar componentes
-                  reutilizáveis e integrados com Styled Components, aplicando
-                  minhas habilidades em React, TypeScript e outras tecnologias
-                  para oferecer soluções eficientes e de alta qualidade.
+                  Currently, I work as a front-end developer, contributing to
+                  the digital experience of thousands of new users on a Web3
+                  platform. I specialize in creating reusable components
+                  integrated with Styled Components, leveraging my skills in
+                  React, TypeScript, and other technologies to deliver efficient
+                  and high-quality solutions.
                 </p>
               </BoxReveal>
 
               <BoxReveal boxColor={"#262626"} duration={0.5}>
                 <p className="inter capitalize text-lg font-extralight">
-                  Fico à disposição para dúvidas e poder contribuir com soluções
-                  aos seus problemas.
+                  I am available to address any questions and contribute
+                  solutions to your challenges.
                 </p>
               </BoxReveal>
 
@@ -55,17 +56,17 @@ export default function Home() {
                     downloadStatus={false}
                     initialText={
                       <span className="group inline-flex items-center">
-                        Baixe o meu curriculo
+                        Download my resume
                         {/* <DownloadIcon className="ml-2 size-4 transition-transform duration-300" /> */}
                       </span>
                     }
                     changeText={
                       <span className="group inline-flex items-center">
                         {/* <CheckIcon className="mr-2 size-4" /> */}
-                        Baixado
+                        Downloaded
                       </span>
                     }
-                    downloadFileUrl={"@/app/assets/Lorem-Ipsum.pdf"}
+                    downloadFileUrl="/jarilson-cv.pdf" // Atualize para o caminho correto
                   />
                 </BoxReveal>
               </div>
@@ -105,7 +106,7 @@ export default function Home() {
                 + <NumberTicker value={6} />
               </p>
               <p className="inter text-lg max-[465px]:text-base">
-                Anos de <br /> expêrincia
+                Years of <br /> experience
               </p>
             </div>
             <div className="w-auto flex items-center gap-3">
@@ -113,7 +114,7 @@ export default function Home() {
                 + <NumberTicker value={14} />
               </p>
               <p className="inter text-lg max-[465px]:text-base">
-                Tecnologias <br /> Dominadas
+                Technologies <br /> Mastered
               </p>
             </div>
             <div className="w-auto flex items-center gap-3">
@@ -121,7 +122,7 @@ export default function Home() {
                 + <NumberTicker value={2180} />
               </p>
               <p className="inter text-lg max-[465px]:text-base">
-                Commits em <br /> Projetos
+                Commits in <br /> Projects
               </p>
             </div>
           </div>
