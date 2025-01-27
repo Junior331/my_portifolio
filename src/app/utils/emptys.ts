@@ -1,7 +1,6 @@
 import { ICloud } from "react-icon-cloud";
 
 import { project } from "@/app/types";
-import { mocks } from "@/app/services/mocks";
 import { images } from "@/app/assets/images";
 
 export const cloudProps: Omit<ICloud, "children"> = {
@@ -34,10 +33,11 @@ export const cloudProps: Omit<ICloud, "children"> = {
 export const emptyProject: project = {
   id: 0,
   slugs: [],
-  title: "Lorem ipsum",
+  images: [],
+  slugs_primary: [],
   text: "Lorem ipsum",
-  image: images.placeholder,
+  title: "Lorem ipsum",
+  banner: images.placeholder,
   date: "NOVEMBER 2024 - NOVEMBER 2024",
-  description:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+  description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
 };
