@@ -13,7 +13,7 @@ export const ControllerTheme = ({ className, disabled = false }: Props) => {
   };
 
   useEffect(() => {
-    if (theme) {
+    if (!theme) {
       setTheme("dark");
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps

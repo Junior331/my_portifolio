@@ -39,16 +39,19 @@ export const Menu = () => {
             tabIndex={0}
             className={cn(
               "relative menu menu-sm dropdown-content rounded-box mt-3 w-52 p-2 shadow z-50",
-              theme === "dark"
-                ? "transform-gpu bg-[#000000de] backdrop-blur-md [border:1px_solid_rgba(255,255,255,.1)]"
-                : "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]"
+              "transform-gpu bg-[#000000de] backdrop-blur-md [border:1px_solid_rgba(255,255,255,.1)]",
+              theme === "light" &&
+                "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]"
             )}
           >
             {routes.map((route) => {
               const isActive = pathname === route.path;
               return (
                 <li key={route.id}>
-                  <Link href={route.path} className="!bg-transparent text-foreground">
+                  <Link
+                    href={route.path}
+                    className="!bg-transparent text-foreground"
+                  >
                     {route.label}
                     {isActive && (
                       <div className="absolute flex w-2 h-2 rounded-lg bg-foreground top-[0.65rem] left-[4.25rem]" />
