@@ -16,8 +16,8 @@ export const Menu = () => {
   const pathname = usePathname();
 
   return (
-    <div className="navbar lg:hidden">
-      <div className="navbar-start">
+    <div className="flex w-full h-auto items-center justify-between lg:hidden">
+      <div className="flex-1">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <svg
@@ -63,18 +63,18 @@ export const Menu = () => {
           </ul>
         </div>
       </div>
-      <div className="navbar-center">
-        <div className="logo-container">
+      <div className="logo-container w-fit">
+        <Link href={"/"} className="!bg-transparent text-foreground">
           <motion.h1 variants={hideNavItemsVariant}>
-            <p className="text-[1.7rem] jetbrains-mono btn btn-ghost ">
-              <span className="khula-extrabold text-[#00FF99]">{`{`} </span>
+            <p className="text-[1.7rem] jetbrains-mono btn btn-ghost">
+              <span className="khula-extrabold text-[#00FF99]">{`{`}</span>
               Jaja
-              <span className="khula-extrabold text-[#00FF99]"> {`}`}</span>
+              <span className="khula-extrabold text-[#00FF99]">{`}`}</span>
             </p>
           </motion.h1>
-        </div>
+        </Link>
       </div>
-      <div className="navbar-end">
+      <div className="flex flex-1 items-center w-auto justify-end">
         <ControllerLanguage />
         <ControllerTheme />
       </div>
