@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useTheme } from "next-themes";
 
 import { Props } from "./@types";
@@ -10,6 +11,13 @@ export const ControllerTheme = ({ className, disabled = false }: Props) => {
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
+
+  useEffect(() => {
+    if (theme) {
+      setTheme("dark");
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [theme]);
 
   return (
     <label
