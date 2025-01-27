@@ -19,13 +19,13 @@ export default function Project() {
 
   useEffect(() => {
     findProjectById(parseFloat(id as string)).then((project) => {
-      setDataProject(project);
+      setDataProject(project as project);
     });
   }, [id]);
 
   useEffect(() => {
     fetchProjects().then((allProjects) => {
-      setListProjects(allProjects);
+      setListProjects(allProjects as project[]);
     });
   }, []);
 

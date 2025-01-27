@@ -32,8 +32,10 @@ export const cloudProps: Omit<ICloud, "children"> = {
 
 export const emptyProject: project = {
   id: 0,
+  site: '',
   slugs: [],
   images: [],
+  github: '',
   slugs_primary: [],
   text: "Lorem ipsum",
   title: "Lorem ipsum",
@@ -41,3 +43,4 @@ export const emptyProject: project = {
   date: "NOVEMBER 2024 - NOVEMBER 2024",
   description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
 };
+
