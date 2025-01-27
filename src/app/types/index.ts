@@ -57,16 +57,20 @@ export type stack = {
   name: string;
 };
 
+export type imageProject = {
+  id: number;
+  url: any;
+};
+
 export type project = {
   id: number;
-  banner: any;
   date: string;
   site: string;
   text: string;
   title: string;
-  images: any[];
   github: string;
   slugs: string[];
   description: string;
+  images: imageProject[];
   slugs_primary: string[];
 };

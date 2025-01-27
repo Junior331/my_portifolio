@@ -1,12 +1,17 @@
 import { images } from "@/app/assets/images";
+import { project } from "@/app/types";
 
-export const projects = [
+export const projects: project[] = [
   {
     id: 1,
-    images: [],
+    images: [
+      {
+        id: 1,
+        url: images.devs,
+      },
+    ],
     github: "",
     title: "DEVS",
-    banner: images.devs,
     text: "Estarndo devs",
     site: "https://www.estartandodevs.com.br/",
     slugs_primary: ["amazonaws", "typescript", "react", "redux", "figma"],
@@ -38,11 +43,23 @@ export const projects = [
   {
     id: 2,
     title: "DASHBOARD",
-    banner: images.project_dashboard,
     images: [
-      images.project_dashboard_nrg,
-      images.project_dashboard_lovestaking,
-      images.project_dashboard_casino,
+      {
+        id: 1,
+        url: images.project_dashboard,
+      },
+      {
+        id: 2,
+        url: images.project_dashboard_nrg,
+      },
+      {
+        id: 3,
+        url: images.project_dashboard_lovestaking,
+      },
+      {
+        id: 4,
+        url: images.project_dashboard_casino,
+      },
     ],
     text: "Love Monster",
     github: "",
@@ -75,11 +92,15 @@ export const projects = [
   },
   {
     id: 3,
-    title: "MATCHBET",
-    images: [],
     github: "",
+    images: [
+      {
+        id: 1,
+        url: images.matchBet,
+      },
+    ],
+    title: "MATCHBET",
     text: "Storm group",
-    banner: images.matchBet,
     site: "https://matchcash.io/",
     slugs_primary: ["typescript", "react", "redux", "amazonaws", "figma"],
     slugs: [
@@ -111,10 +132,14 @@ export const projects = [
     id: 4,
     site: "",
     github: "",
-    images: [],
     text: "Visna",
     title: "VISNA VIKI",
-    banner: images.visna,
+    images: [
+      {
+        id: 1,
+        url: images.visna,
+      },
+    ],
     slugs_primary: ["typescript", "react", "redux", "amazonaws", "figma"],
     slugs: [
       "html5",
@@ -143,11 +168,15 @@ export const projects = [
   },
   {
     id: 5,
-    images: [],
+    images: [
+      {
+        id: 1,
+        url: images.project_marketplace,
+      },
+    ],
     github: "",
     title: "MARKETPLACE",
     text: "Love Monster",
-    banner: images.project_marketplace,
     site: "https://marketplace.playlovemonster.com/",
     slugs_primary: ["typescript", "react", "redux", "amazonaws", "figma"],
     slugs: [
@@ -179,9 +208,13 @@ export const projects = [
     id: 6,
     site: "",
     github: "",
-    images: [],
+    images: [
+      {
+        id: 1,
+        url: images.proz,
+      },
+    ],
     title: "PROZ",
-    banner: images.proz,
     text: "Proz educação",
     slugs_primary: ["typescript", "react", "redux", "amazonaws", "figma"],
     slugs: [
@@ -213,10 +246,14 @@ export const projects = [
     id: 7,
     site: "",
     github: "",
-    images: [],
+    images: [
+      {
+        id: 1,
+        url: images.conectEdu,
+      },
+    ],
     text: "Techdog",
     title: "CONECT+EDU",
-    banner: images.conectEdu,
     slugs_primary: ["typescript", "react", "redux", "amazonaws", "figma"],
     slugs: [
       "html5",
@@ -245,10 +282,14 @@ export const projects = [
   },
   {
     id: 8,
-    images: [],
+    images: [
+      {
+        id: 1,
+        url: images.project_featoubeat,
+      },
+    ],
     title: "FeatOuBeat",
     text: "FeatOuBeat",
-    banner: images.project_featoubeat,
     site: "https://www.featoubeat.com.br/",
     github: "https://github.com/FeatOuBeat/FeatOuBeatBeta",
     slugs_primary: [
@@ -290,10 +331,14 @@ export const projects = [
   },
   {
     id: 9,
-    images: [],
+    images: [
+      {
+        id: 1,
+        url: images.projectConvit3Digital,
+      },
+    ],
     text: "Student",
     title: "Convit3 Digital",
-    banner: images.projectConvit3Digital,
     site: "https://training-devs.vercel.app/",
     github: "https://github.com/Junior331/training-devs",
     slugs_primary: [
@@ -334,10 +379,14 @@ export const projects = [
   },
   {
     id: 10,
-    images: [],
+    images: [
+      {
+        id: 1,
+        url: images.project_cupmind,
+      },
+    ],
     text: "Student",
     title: "CanecaAI",
-    banner: images.project_cupmind,
     site: "https://cupmind.vercel.app/",
     github: "https://github.com/Cup-Mind/cupmind",
     slugs_primary: [
@@ -378,10 +427,14 @@ export const projects = [
   },
   {
     id: 11,
-    images: [],
+    images: [
+      {
+        id: 1,
+        url: images.projectCheckoutCarbon,
+      },
+    ],
     text: "Student",
     title: "Checkout Carbon",
-    banner: images.projectCheckoutCarbon,
     github: "https://github.com/Junior331/frontend-test-tree",
     site: "https://frontend-test-tree.vercel.app/",
     slugs_primary: [
@@ -422,10 +475,14 @@ export const projects = [
   },
   {
     id: 12,
-    images: [],
+    images: [
+      {
+        id: 1,
+        url: images.projeto_camisa_cria,
+      },
+    ],
     text: "Student",
     title: "CamisaCria",
-    banner: images.projeto_camisa_cria,
     site: "https://camisa-crias.vercel.app/",
     github: "https://github.com/Junior331/CamisaCrias",
     slugs_primary: [
@@ -468,10 +525,26 @@ export const projects = [
     id: 13,
     title: "Turtle",
     text: "Hackathon",
-    banner: images.turtle01,
     site: "https://helpful-chebakia-1fdd2c.netlify.app/",
     github: "https://github.com/Junior331/Project-Turtle",
-    images: [images.turtle02, images.turtle03, images.turtle04],
+    images: [
+      {
+        id: 1,
+        url: images.turtle01,
+      },
+      {
+        id: 2,
+        url: images.turtle02,
+      },
+      {
+        id: 3,
+        url: images.turtle03,
+      },
+      {
+        id: 4,
+        url: images.turtle04,
+      },
+    ],
     slugs_primary: ["typescript", "styledcomponents", "react", "jest", "figma"],
     slugs: [
       "typescript",
@@ -494,10 +567,14 @@ export const projects = [
   },
   {
     id: 14,
-    images: [],
+    images: [
+      {
+        id: 1,
+        url: images.projectLocalize,
+      },
+    ],
     text: "Student",
     title: "Localize",
-    banner: images.projectLocalize,
     site: "https://challenge-localize-lawtech.vercel.app/",
     github: "https://github.com/Junior331/challenge_localize_lawtech",
     slugs_primary: [
@@ -534,10 +611,14 @@ export const projects = [
   },
   {
     id: 15,
-    images: [],
+    images: [
+      {
+        id: 1,
+        url: images.projectShop,
+      },
+    ],
     title: "Shop",
     text: "Student",
-    banner: images.projectShop,
     site: "https://challenge-shop.vercel.app/",
     github: "https://github.com/Junior331/challenge_shop",
     slugs_primary: [
@@ -573,10 +654,14 @@ export const projects = [
   },
   {
     id: 16,
-    images: [],
+    images: [
+      {
+        id: 1,
+        url: images.projectDogzverse,
+      },
+    ],
     text: "Freelance",
     title: "Dogzverse",
-    banner: images.projectDogzverse,
     site: "https://dogzverse-refactor.vercel.app/",
     github: "https://github.com/Junior331/dogzverse_refactor",
     slugs_primary: [
@@ -611,10 +696,14 @@ export const projects = [
   },
   {
     id: 17,
-    images: [],
+    images: [
+      {
+        id: 1,
+        url: images.project_claim_token,
+      },
+    ],
     text: "Love Monster",
     title: "Claim Token",
-    banner: images.project_claim_token,
     site: "https://claim-love-tokens.vercel.app/",
     github: "https://github.com/Junior331/claim-love-tokens",
     slugs_primary: [
@@ -650,10 +739,14 @@ export const projects = [
   },
   {
     id: 18,
-    images: [],
+    images: [
+      {
+        id: 1,
+        url: images.project_snowdex,
+      },
+    ],
     title: "Snowdex",
     text: "Love Monster",
-    banner: images.project_snowdex,
     site: "https://snowdex.vercel.app/",
     github: "https://github.com/Junior331/Snowdex",
     slugs_primary: [
@@ -689,10 +782,14 @@ export const projects = [
   },
   {
     id: 19,
-    images: [],
+    images: [
+      {
+        id: 1,
+        url: images.project_challenge_next,
+      },
+    ],
     text: "Student",
     title: "Challenge Next",
-    banner: images.project_challenge_next,
     github: "https://github.com/Junior331/challenge_next",
     site: "https://challenge-next-1n1iv9jkd-junior331.vercel.app/weathers",
     slugs_primary: [
@@ -726,10 +823,14 @@ export const projects = [
   },
   {
     id: 20,
-    images: [],
+    images: [
+      {
+        id: 1,
+        url: images.projectXgrow,
+      },
+    ],
     text: "Student",
     title: "Xgrow",
-    banner: images.projectXgrow,
     site: "https://challenge-xgrow.vercel.app/",
     github: "https://github.com/Junior331/challenge-xgrow",
     slugs_primary: [

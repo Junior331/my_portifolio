@@ -1,4 +1,5 @@
 import cup from "./cup.svg";
+import yup from "./yup.jpg";
 import game from "./game.svg";
 import figma from "./figma.svg";
 import azure from "./azure.png";
@@ -24,6 +25,7 @@ import mortarboard from "./mortarboard.png";
 
 export const icons = {
   cup,
+  yup,
   game,
   react,
   figma,

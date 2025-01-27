@@ -45,7 +45,7 @@ export const Card = ({ projects, className }: Props) => {
                     <div
                       className="flex flex-col justify-end p-4 h-full bg-cover bg-center"
                       style={{
-                        backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(${item.banner.src})`,
+                        backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(${item.images[0].url})`,
                       }}
                     >
                       <button
