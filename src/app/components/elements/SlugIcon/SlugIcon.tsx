@@ -37,7 +37,7 @@ export const SlugIcon = ({ slugs, isSecondary }: Props) => {
             isSecondary ? listClassNameIcon[index] : ""
           }`
         )}
-        onMouseLeave={() => setHoveredIcon(icon.slug)}
+        onMouseLeave={() => setHoveredIcon(null)}
         onMouseEnter={() => setHoveredIcon(icon.slug)}
       >
         {!emptyIcon ? (
