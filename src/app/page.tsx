@@ -50,8 +50,8 @@ export default function Home() {
                 </p>
               </BoxReveal>
 
-              <div className="z-10 flex mt-16 items-center justify-start padding-button">
-                <BoxReveal boxColor={"#262626"} duration={0.5}>
+              <div className="z-10 flex mt-16 items-center justify-start padding-button w-full max-w-80">
+                <BoxReveal width="100%" boxColor={"#262626"} duration={0.5}>
                   <Button
                     downloadStatus={false}
                     initialText={
@@ -100,7 +100,7 @@ export default function Home() {
               />
             </a>
           </div>
-          <div className="flex gap-12 max-[420px]:flex-wrap max-[465px]:flex-1 items-center justify-between flex-1 max-w-[780px]">
+          <div className="flex gap-12 max-[450px]:flex-wrap items-center justify-between flex-1 max-w-[780px]">
             <div className="w-auto flex items-center gap-3">
               <p className="flex items-center text-3xl font-bold ">
                 + <NumberTicker value={6} />
@@ -130,4 +130,32 @@ export default function Home() {
       </div>
     </Layout>
   );
+}
+{
+  /* <div className="grid gap-12 max-w-[780px] auto-rows-auto md:grid-cols-[repeat(auto-fit,minmax(216px,1fr))]">
+<div className="w-auto flex items-center gap-3">
+  <p className="flex items-center text-3xl font-bold">
+    + <NumberTicker value={6} />
+  </p>
+  <p className="inter text-lg max-[465px]:text-base">
+    Years of <br /> experience
+  </p>
+</div>
+<div className="w-auto flex items-center gap-3">
+  <p className="flex items-center text-3xl font-bold">
+    + <NumberTicker value={14} />
+  </p>
+  <p className="inter text-lg max-[465px]:text-base">
+    Technologies <br /> Mastered
+  </p>
+</div>
+<div className="w-auto flex items-center gap-3">
+  <p className="flex items-center text-3xl font-bold">
+    + <NumberTicker value={2180} />
+  </p>
+  <p className="inter text-lg max-[465px]:text-base">
+    Commits in <br /> Projects
+  </p>
+</div>
+</div> */
 }

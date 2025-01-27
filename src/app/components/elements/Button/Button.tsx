@@ -31,7 +31,7 @@ export const Button = ({
       {isDownload ? (
         <motion.button
           disabled
-          className="relative flex w-80 h-14 items-center justify-center overflow-hidden rounded-md bg-[#15161A] p-2"
+          className="relative flex w-full max-w-80 h-14 items-center justify-center overflow-hidden rounded-md bg-[#15161A] p-2"
           onClick={() => setIsDownload(false)}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -49,7 +49,7 @@ export const Button = ({
         </motion.button>
       ) : (
         <motion.button
-          className="relative flex w-80 h-14 cursor-pointer items-center justify-center rounded-md border-none p-2 animate-pulse bg-[#15161A]"
+          className="relative flex w-full max-w-80 h-14 cursor-pointer items-center justify-center rounded-md border-none p-2 animate-pulse bg-[#15161A]"
           style={
             {
               backgroundColor: buttonColor,

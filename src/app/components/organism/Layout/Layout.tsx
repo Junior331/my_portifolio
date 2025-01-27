@@ -3,7 +3,7 @@
 import { LayoutProps } from "./@types";
 import { cn } from "@/app/utils/utils";
 import { DotPattern } from "./DotPattern";
-import { Header } from "@/app/components/modules";
+import { Header, Menu } from "@/app/components/modules";
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
@@ -16,8 +16,9 @@ export const Layout = ({ children }: LayoutProps) => {
         />
       </div>
       <div className="fixed pointer-events-none inset-0 flex items-center justify-center bg-transparent [mask-image:radial-gradient(ellipse_at_center,transparent_20%, black)]" />
-      <div className="flex flex-col w-full min-h-screen h-auto items-center justify-items-center overflow-y-auto relative z-50 p-7 px-8">
+      <div className="flex flex-col w-full min-h-screen h-auto items-center justify-items-center overflow-y-auto relative z-50 md:p-3 md:px-4">
         <Header />
+        <Menu />
         {children}
       </div>
     </div>
