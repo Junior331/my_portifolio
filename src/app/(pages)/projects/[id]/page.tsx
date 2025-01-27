@@ -36,12 +36,12 @@ export default function Project() {
 
         <div className="w-full h-full gap-5 grid grid-cols-1 lg:grid-cols-2 pb-5">
           <div className="flex flex-col w-full h-full">
-            <Title className="text-6xl mb-4">{dataProject.title}</Title>
-            <Text className="text-xl uppercase text-foreground font-extralight">
+            <Title className="text-5xl md:text-6xl mb-4">{dataProject.title}</Title>
+            <Text className="text-base md:text-xl uppercase text-foreground font-extralight">
               NOVEMBER 2024 - NOVEMBER 2024
             </Text>
 
-            <Text className="my-8 text-2xl max-w-[790px]">
+            <Text className="my-8 text-lg md:text-2xl max-w-[790px]">
               {dataProject.description}
             </Text>
 
@@ -50,7 +50,7 @@ export default function Project() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-4">
+          <div className="flex flex-col gap-4">
             <Image
               src={imageActive.url}
               alt={`Image project ${dataProject.title}`}
@@ -60,7 +60,7 @@ export default function Project() {
               )}
             />
 
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 md:gap-4">
               {dataProject.images
                 .filter(({ id }) => id !== imageActive.id)
                 .map((item, index) => (
